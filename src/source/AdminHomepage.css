@@ -1,0 +1,64 @@
+/* Admin homepage container */
+.admin-homepage-container {
+    margin-top: 60px; /* Adjust for navbar height */
+    padding: 20px;
+    background:rgb(255, 204, 178); /* Light background color for content */
+    min-height: 92.3vh;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admin-title {
+    font-size: 2.5em;
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+.admin-subtitle {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.admin-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.admin-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.admin-card-icon {
+    font-size: 2em;
+    color: #ff7e5f; /* Accent color */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.admin-card-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.admin-card-description {
+    font-size: 1em;
+    color: #555;
+}

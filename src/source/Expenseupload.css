@@ -1,0 +1,100 @@
+/* Expenseupload.css */
+
+/* General styles for the container */
+.expense-upload-container {
+    background-color: #f0f0f0; /* Light gray background for the container */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  .expense-upload-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Input and textarea styling */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Textarea specific styling */
+  .form-group textarea {
+    min-height: 100px;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #007bff; /* Blue background for the button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover state */
+  button:hover {
+    background-color: #0056b3; /* Darker blue for button hover effect */
+  }
+  
+  /* Button disabled state */
+  button:disabled {
+    background-color: #cccccc; /* Light gray for disabled button */
+    cursor: not-allowed;
+  }
+  
+  /* Button loading state */
+  button.loading {
+    background-color: #007bff; /* Keep the same color, or adjust if needed */
+    cursor: progress;
+  }
+  
+  /* Input read-only styling */
+  input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+  /* Background color for the page */
+  body {
+    background-color: rgb(254, 245, 235); /* Light peach background for the page */
+  }
+  
+  /* Optional: Additional styling for a back button or other elements */
+  .back {
+    background-color: black; /* Example styling for a back button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

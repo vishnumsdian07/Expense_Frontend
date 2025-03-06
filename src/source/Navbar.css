@@ -1,0 +1,132 @@
+/* General navbar styles */
+.navbar {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-item {
+    margin: 0;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+/* Modal styles */
+.custom-modal .modal-dialog {
+    max-width: 500px;
+}
+
+.custom-modal .modal-content {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.custom-modal .modal-header {
+    border-bottom: 1px solid #444;
+    position: relative;
+}
+
+.custom-modal .modal-title {
+    color: #fff;
+}
+
+.custom-modal .modal-body {
+    padding: 20px;
+}
+
+.custom-modal .form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.custom-modal .form-control::placeholder {
+    color: #ccc;
+}
+
+.custom-modal .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.custom-modal .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.custom-modal .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.custom-modal .btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.custom-modal .alert {
+    margin-bottom: 20px;
+}
+
+.custom-modal .modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.register-link {
+    margin-top: 15px;
+}
+
+.register-link span {
+    color: #ccc;
+}
+
+.register-link .btn-link {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.register-link .btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

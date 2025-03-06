@@ -1,0 +1,57 @@
+/* RegisterModal.css */
+
+/* General modal styles */
+.custom-modal .modal-dialog {
+    max-width: 600px; /* Adjust width as needed */
+  }
+  
+  .custom-modal .modal-header {
+    background-color: #f8f9fa; /* Light grey background for header */
+    border-bottom: 1px solid #dee2e6; /* Border for header */
+  }
+  
+  .custom-modal .modal-title {
+    font-weight: bold;
+    color: #007bff; /* Bootstrap primary color for title */
+  }
+  
+  .custom-modal .modal-body {
+    padding: 20px; /* Space inside modal body */
+  }
+  
+  .custom-modal .form-control {
+    margin-bottom: 15px; /* Space between form fields */
+  }
+  
+  .custom-modal .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px; /* Space above actions */
+  }
+  
+  .custom-modal .modal-actions .btn {
+    margin-left: 10px; /* Space between buttons */
+  }
+  
+  .custom-modal .alert {
+    margin-bottom: 15px; /* Space below alert */
+  }
+  
+  .custom-modal .btn-success {
+    background-color: #28a745; /* Bootstrap success color */
+    border: none;
+  }
+  
+  .custom-modal .btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .custom-modal .btn-secondary {
+    background-color: #6c757d; /* Bootstrap secondary color */
+    border: none;
+  }
+  
+  .custom-modal .btn-secondary:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+  }
+  

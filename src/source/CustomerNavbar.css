@@ -1,0 +1,79 @@
+/* General customer navbar styles */
+.customer-navbar {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.customer-navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-navbar-logo {
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.customer-navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.customer-navbar-item {
+    position: relative;
+}
+
+.customer-navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.customer-navbar-link:hover {
+    color: #007bff;
+    transform: translateY(-5px);
+}
+
+.customer-navbar-icon {
+    font-size: 1.4em;
+    margin-right: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.customer-navbar-link:hover .customer-navbar-icon {
+    color: #007bff;
+    transform: rotate(20deg) scale(1.2); /* Rotate and scale the icon on hover */
+}
+
+.customer-navbar-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+.customer-navbar-link:hover::after {
+    width: 100%;
+}
+
+.customer-navbar-email {
+    color: #fff;
+    font-size: 1.2em;
+}
