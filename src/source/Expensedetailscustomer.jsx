@@ -8,6 +8,7 @@ import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import { getAppUrl } from './api/api-config';
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement); // Register Chart.js components
 
@@ -23,7 +24,8 @@ const Expensedetailscustomer = () => {
     // Fetch expenses by email when component mounts
     const fetchExpenses = async () => {
       try {
-        const response = await axios.get(`http://localhost:6900/api/expenses/email/${email}`);
+        let url = getAppUrl(`expenses/email/${email}`)
+        const response = await axios.get(url);
         setExpenses(response.data);
         setFilteredExpenses(response.data);
         setLoading(false);

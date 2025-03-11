@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AdminNavbar from './AdminNavbar';
 import { PencilSquare, Envelope } from 'react-bootstrap-icons';
 import axios from 'axios';
+import { getAppUrl } from './api/api-config';
 
 function AdminAnnouncement() {
   const [title, setTitle] = useState('');
@@ -12,7 +13,8 @@ function AdminAnnouncement() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:6900/api/announcements', { title, message })
+    let url = getAppUrl('announcements')
+    axios.post(url, { title, message })
       .then(response => {
         console.log('Announcement submitted:', response.data);
         fetchAnnouncements(); // Refresh the announcements list
@@ -21,7 +23,8 @@ function AdminAnnouncement() {
   };
 
   const fetchAnnouncements = () => {
-    axios.get('http://localhost:6900/api/announcements')
+    let url = getAppUrl('announcements')
+    axios.get(url)
       .then(response => setAnnouncements(response.data))
       .catch(error => console.error('Error fetching announcements:', error));
   };

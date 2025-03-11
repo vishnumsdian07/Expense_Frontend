@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CustomerNavbar from './CustomerNavbar';
 import './Expenseupload.css';  // Import the CSS file
+import { getAppUrl } from './api/api-config';
 
 function Expenseupload() {
   // State to manage form data
@@ -63,7 +64,9 @@ function Expenseupload() {
     setIsLoading(true);
 
     // Submit form data to the backend
-    fetch('http://localhost:6900/api/expenses', {
+    
+    let url = getAppUrl('expenses')
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

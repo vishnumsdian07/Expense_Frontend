@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Table, Spinner, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdminNavbar from './AdminNavbar';
+import { getAppUrl } from './api/api-config';
 
 const Customerdetails = () => {
   const [customers, setCustomers] = useState([]);
@@ -10,7 +11,8 @@ const Customerdetails = () => {
 
   useEffect(() => {
     // Fetch customer data from backend
-    fetch('http://localhost:6900/api/customers/all') // Replace with your backend URL
+    let url = getAppUrl('customers/all')
+    fetch(url) // Replace with your backend URL
       .then(response => response.json())
       .then(data => {
         setCustomers(data);

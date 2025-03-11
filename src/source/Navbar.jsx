@@ -3,9 +3,10 @@ import { Modal, Button, Form, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import { getAppUrl } from './api/api-config';
 
 // API URL for backend
-const API_URL = 'http://localhost:6900/api/customers';
+const API_URL = getAppUrl('customers');
 
 function Navbar() {
   const [showCustomerModal, setShowCustomerModal] = useState(false);

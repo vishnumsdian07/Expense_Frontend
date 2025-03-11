@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './AdminExpenseDetails.css';  // Import the custom CSS
 import { FaSearch } from 'react-icons/fa';  // Import the search icon from react-icons
 import OrganizeNavbar from './OrganizeNavbar';
+import { getAppUrl } from './api/api-config';
 
 function Organizationexpensedetails() {
   const [expenses, setExpenses] = useState([]);
@@ -15,7 +16,8 @@ function Organizationexpensedetails() {
 
   useEffect(() => {
     // Fetch expenses from the backend
-    fetch('http://localhost:6900/api/expenses')
+    let url = getAppUrl('expenses')
+    fetch(url)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

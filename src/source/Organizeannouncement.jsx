@@ -6,6 +6,7 @@ import { FaBullhorn } from 'react-icons/fa'; // Import an icon from react-icons
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Customerannouncement.css'; // Import the CSS file for styles
 import OrganizeNavbar from './OrganizeNavbar';
+import { getAppUrl } from './api/api-config';
 
 const Customerannouncement = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -15,7 +16,8 @@ const Customerannouncement = () => {
   useEffect(() => {
     const fetchAnnouncements = async () => {
       try {
-        const response = await axios.get('http://localhost:6900/api/announcements');
+        let url = getAppUrl('announcements')
+        const response = await axios.get(url);
         setAnnouncements(response.data);
         setLoading(false);
       } catch (error) {
